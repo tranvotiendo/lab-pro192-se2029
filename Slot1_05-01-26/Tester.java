@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package slot1_execirse1;
+package tester;
 
 /**
  *
  * @author tranv
  */
-public class Slot1_Execirse1 { //Hàm Test nhu cô
+public class Tester { //Hàm Test nhu cô
 
     /**
      * @param args the command line arguments
