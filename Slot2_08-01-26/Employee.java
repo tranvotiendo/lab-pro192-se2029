@@ -22,7 +22,7 @@ public class Employee {
     }
 
     double getThuNhapTruocThue(double date_work) {
-        return salary * (date_work - (getBHTN() + getBHXH() + getBHYT()));
+        return salary * date_work - (getBHTN() + getBHXH() + getBHYT());
     }
 
     double getTAX(double date_work) {
@@ -58,32 +58,34 @@ public class Employee {
 
         System.out.print("Input yob: ");
         yob = Integer.parseInt(sc.nextLine());
-        
+
     }
 
     void ouputNhanVien() {
         System.out.println("----THONG TIN NHAN VIEN VUA NHAP----");
         System.out.println("ID: " + id);
         System.out.println("Name: " + name);
-        System.out.printf("Salary: %.2f \n", salary);
+        System.out.printf("Salary: %,.0f VND\n", salary);
         System.out.println("Yob: " + yob);
     }
+
     void printBangLuong(double date_work) {
         LocalDate today = LocalDate.now();
         System.out.println("---- BANG LUONG THANG " + today.getMonthValue() + " NAM " + today.getYear() + " ----");
         System.out.println("----THONG TIN CA NHAN----");
         System.out.println("ID: " + id);
         System.out.println("Name: " + name);
-        System.out.printf("Salary: %.2f \n", salary);
+        System.out.printf("Salary: %,.0f VND\n", salary);
         System.out.println("Yob: " + yob);
         System.out.println("----THONG TIN HUONG BAO HIEM----");
-        System.out.println("BHYT: " + getBHYT());
-        System.out.println("BHXH: " + getBHXH());
-        System.out.println("BHTN: " + getBHTN());
-        System.out.println("----THONG TIN LUONG/ THUE----");
-        System.out.println("Thu nhap truoc thue: " + getThuNhapTruocThue(date_work));
-        System.out.println("Thu nhap thuc lanh: " + getThuNhapThucLanh(date_work));
-        System.out.println("Thue TNCN: " + getTAX(date_work));
-        
+        System.out.printf("BHYT: %,.0f VND\n", getBHYT());
+        System.out.printf("BHXH: %,.0f VND\n", getBHXH());
+        System.out.printf("BHTN: %,.0f VND\n", getBHTN());
+
+        System.out.println("----THONG TIN LUONG / THUE----");
+        System.out.printf("Thu nhap truoc thue: %,.0f VND\n", getThuNhapTruocThue(date_work));
+        System.out.printf("Thu nhap thuc lanh: %,.0f VND\n", getThuNhapThucLanh(date_work));
+        System.out.printf("Thue TNCN: %,.0f VND\n", getTAX(date_work));
+
     }
 }
